@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Surebet e Freebet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Surebet</h1>
+        <form id="surebetForm">
+            <div class="input-group">
+                <label for="odd1">Odd 1:</label>
+                <input type="number" step="0.01" id="odd1" name="odd1" oninput="atualizarCalculo()" required>
+                <label>
+                    <input type="checkbox" id="freebet1" onchange="atualizarCalculo()"> Freebet
+                </label>
+                <input type="number" step="0.01" id="valorFreebet1" placeholder="Valor Freebet" oninput="atualizarCalculo()">
+            </div>
+
+            <div class="input-group">
+                <label for="odd2">Odd 2:</label>
+                <input type="number" step="0.01" id="odd2" name="odd2" oninput="atualizarCalculo()" required>
+            </div>
+
+            <button type="button" onclick="atualizarCalculo()">Calcular Surebet</button>
+        </form>
+
+        <div id="resultado" class="resultado">
+            Preencha as odds e clique em Calcular.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
